@@ -19,9 +19,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
-        float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        float horizontalMovement = 1;
 
-        // horizontalMovement(Vector3.right * moveSpeed * Time.deltaTime);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -39,8 +38,9 @@ public class PlayerMovement : MonoBehaviour
     }
     void MovePlayer(float _horizontalMovement)
     {
-        Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+        //Vector3 targetVelocity = new Vector2(_horizontalMovement * moveSpeed, rb.velocity.y);
+        // rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+        rb.AddForce(new Vector2(moveSpeed * _horizontalMovement, 0));
         if(isJumping == true)
         {
             rb.AddForce(new Vector2(0f, jumpForce));

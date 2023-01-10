@@ -516,8 +516,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974375849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.28, y: 2.6399999, z: 0.18716872}
-  m_LocalScale: {x: 0.05895855, y: 3.0663, z: 1}
+  m_LocalPosition: {x: 0.68, y: 2.7104, z: 0.18716872}
+  m_LocalScale: {x: 0.05895855, y: 4.3271627, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -714,8 +714,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045793619}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.78, y: 1.6168, z: 0.08846686}
-  m_LocalScale: {x: 0.45304528, y: 0.45312795, z: 1}
+  m_LocalPosition: {x: -1.83, y: 1.88, z: 0.08846686}
+  m_LocalScale: {x: 0.45304528, y: 0.42671433, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1822890456}
@@ -756,7 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73eb40d5ba3f53d4a9c99aa582738ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3000
+  moveSpeed: 1
   rb: {fileID: 1045793623}
   isJumping: 0
   jumpForce: 350
@@ -997,8 +997,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230160188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.92, y: 2.58, z: 0.18716872}
-  m_LocalScale: {x: 0.05895855, y: 3.0663, z: 1}
+  m_LocalPosition: {x: -2.416, y: 3.1391, z: 0.18716872}
+  m_LocalScale: {x: 0.08693438, y: 5.3047776, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1173,7 +1173,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1871200700}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 27f5ee87ac4f2b1478703b8d212d9c53, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
