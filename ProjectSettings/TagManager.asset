@@ -50,6 +50,9 @@ TagManager:
   - name: BackDetails2
     uniqueID: 3327496503
     locked: 0
+  - name: BackDetails3
+    uniqueID: 2740414141
+    locked: 0
   - name: Player
     uniqueID: 1649083177
     locked: 0
