@@ -14,11 +14,13 @@ public class TriggerBox : MonoBehaviour
             if (ToActivate.activeSelf)
             {
                 ToActivate.SetActive(false);
+                
 
             } else
             {
                 ToActivate.SetActive(true);
             }
+            gameObject.SetActive(false);
         }
     }
 }

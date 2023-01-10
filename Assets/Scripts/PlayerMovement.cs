@@ -33,7 +33,13 @@ public class PlayerMovement : MonoBehaviour {
             print("wall");
             isGoingRight = !isGoingRight;
         }
-       
+        if (other.gameObject.CompareTag("obstacle"))
+        {
+            print("obstacle");
+            isGoingRight = !isGoingRight;
+            currentSpeed = minSpeed;
+        }
+
     }
     void Update()
     {
