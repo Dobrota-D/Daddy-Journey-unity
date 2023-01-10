@@ -24,6 +24,11 @@ public class PlayerJump : MonoBehaviour
         {
             velocity = jumpForce;
         }
+        if (Input.GetButtonDown("A") && groundCheck.isGrounded )
+        {
+            Debug.Log("AAAAAAAAAAAAAAAh");
+            velocity = jumpForce;
+        }
         transform.Translate(new Vector3(0, velocity, 0) * Time.deltaTime);
     }
 }
