@@ -1,56 +1,73 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
-{
-    public float moveSpeed;
-    public Rigidbody2D rb;
-    private Vector3 velocity = Vector3.zero;
-    public bool isJumping = false;
-    public float jumpForce;
-    public bool isGrounded;
-    public Transform groundCheck;
-    private float horizontalMovement;
-    public float groundCheckRadius;
-    public LayerMask collisionLayers;
+public class PlayerMovement : MonoBehaviour { 
 
+    [Header ("Speed Movement")]
+    [SerializeField] float currentSpeed;
+    [SerializeField] float minSpeed;
+    [SerializeField] float maxMoveSpeed;
+    
+    [Header ("Direction")]
+    [SerializeField] bool isGoingRight;
+    
+    private float _direction;
 
-    void Update()
+    private void Awake()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
-        float horizontalMovement = 1;
+        currentSpeed = minSpeed;
+    }
 
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
+    private void Start()
+    {
+        StartCoroutine(AccelerationCoroutine());
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        // collision with a wall : just go back
+        if (other.gameObject.CompareTag("wall"))
         {
-            isJumping = true;
+            print("wall");
+            isGoingRight = !isGoingRight;
         }
 
-
-        MovePlayer(horizontalMovement);
+        // collision with a wall : go back and remove currentSpeed
+        if (other.gameObject.CompareTag("obstacle"))
+        {
+            print("obstacle");
+            isGoingRight = !isGoingRight;
+            currentSpeed = minSpeed;
+        }
     }
-    void FixedUpdate()
+    void Update()
     {
-      
-        MovePlayer(horizontalMovement);
 
+        if (isGoingRight)
+        {
+            _direction = 1;
+        } else
+        {
+            _direction = -1;
+        }
+        MovePlayer();
     }
-    void MovePlayer(float _horizontalMovement)
+    void MovePlayer()
     {
         //Vector3 targetVelocity = new Vector2(_horizontalMovement * moveSpeed, rb.velocity.y);
         // rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
-        rb.AddForce(new Vector2(moveSpeed * _horizontalMovement, 0));
-        if(isJumping == true)
+        // rb.AddForce(new Vector2(moveSpeed * _horizontalMovement, 0));
+        //transform.position = transform.position + new Vector3(_direction * currentSpeed * Time.deltaTime, 0, 0);
+        transform.Translate(Vector3.right * currentSpeed * _direction * Time.smoothDeltaTime);
+    }
+
+    private IEnumerator AccelerationCoroutine()
+    {
+        while(currentSpeed < maxMoveSpeed)
         {
-            rb.AddForce(new Vector2(0f, jumpForce));
-            isJumping = false;
+            yield return new WaitForSeconds(1f);
+            currentSpeed += 1;
         }
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-    }
-   
 }
