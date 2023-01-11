@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 4325034183610142388}
-  jumpForce: 20
+  jumpForce: 15
   gravity: -9.81
   gravityScale: 5
 --- !u!114 &4325034183517182728
