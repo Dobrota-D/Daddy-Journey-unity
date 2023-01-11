@@ -32,13 +32,9 @@ public class Timer : MonoBehaviour
         {
             seconds = 0; //Make sure the seconds won't be negative
             isRunning = false;
-            Debug.Log("Time out !");
-
             return;
         }
-
         seconds -= Time.deltaTime;
-        Debug.Log(seconds + " left !");
     }
 
     public string DisplayTime()
