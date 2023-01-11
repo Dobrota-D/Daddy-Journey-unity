@@ -32,14 +32,15 @@ public class PlayerMovement : MonoBehaviour {
         {
             print("wall");
             isGoingRight = !isGoingRight;
-            if(GetComponentInChildren<SpriteRenderer>().flipX == true)
-            {
-                GetComponentInChildren<SpriteRenderer>().flipX = false;
-            }
-            else
-            {
-                GetComponentInChildren<SpriteRenderer>().flipX = true;
-            }
+            GetComponentInChildren<SpriteRenderer>().flipX = !GetComponentInChildren<SpriteRenderer>().flipX;
+            //if (GetComponentInChildren<SpriteRenderer>().flipX == true)
+            //{
+            //    GetComponentInChildren<SpriteRenderer>().flipX = false;
+            //}
+            //else
+            //{
+            //    GetComponentInChildren<SpriteRenderer>().flipX = true;
+            //}
             // GetComponentInChildren<SpriteRenderer>().flipX = true;
         }
 
