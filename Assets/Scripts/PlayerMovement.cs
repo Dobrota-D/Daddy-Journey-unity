@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] float currentSpeed;
     [SerializeField] float minSpeed;
     [SerializeField] float maxMoveSpeed;
-    
+    [SerializeField] Animator animator;
     [Header ("Direction")]
     [SerializeField] bool isGoingRight;
     
@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         StartCoroutine(AccelerationCoroutine());
     }
+  
     private void OnTriggerEnter(Collider other)
     {
         // collision with a wall : just go back
@@ -31,6 +32,15 @@ public class PlayerMovement : MonoBehaviour {
         {
             print("wall");
             isGoingRight = !isGoingRight;
+            if(GetComponentInChildren<SpriteRenderer>().flipX == true)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
+            else
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
+            // GetComponentInChildren<SpriteRenderer>().flipX = true;
         }
 
         // collision with a wall : go back and remove currentSpeed
@@ -39,6 +49,16 @@ public class PlayerMovement : MonoBehaviour {
             print("obstacle");
             isGoingRight = !isGoingRight;
             currentSpeed = minSpeed;
+
+            if (GetComponentInChildren<SpriteRenderer>().flipX == true)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
+            else
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
+
         }
     }
     void Update()
