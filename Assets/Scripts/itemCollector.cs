@@ -14,7 +14,7 @@ public class itemCollector : MonoBehaviour
         {
             Destroy(collision.gameObject);
             milks++;
-            milksText.text = "milks: " + milks;
+            milksText.text = "milks: " + milks + " /4";
         }
     }
   
