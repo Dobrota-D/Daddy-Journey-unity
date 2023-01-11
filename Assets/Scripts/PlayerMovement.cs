@@ -13,9 +13,7 @@ public class PlayerMovement : MonoBehaviour {
     [Header ("Direction")]
     [SerializeField] bool isGoingRight;
     
-
     private float _direction;
-    
 
     private void Awake()
     {
@@ -28,18 +26,20 @@ public class PlayerMovement : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider other)
     {
+        // collision with a wall : just go back
         if (other.gameObject.CompareTag("wall"))
         {
             print("wall");
             isGoingRight = !isGoingRight;
         }
+
+        // collision with a wall : go back and remove currentSpeed
         if (other.gameObject.CompareTag("obstacle"))
         {
             print("obstacle");
             isGoingRight = !isGoingRight;
             currentSpeed = minSpeed;
         }
-
     }
     void Update()
     {

@@ -20,13 +20,15 @@ public class PlayerJump : MonoBehaviour
 
             transform.position = snappedPosition;
         }
+        // verif jump : Keyboard
         if (Input.GetButtonDown("Jump") && groundCheck.isGrounded)
         {
             velocity = jumpForce;
         }
+
+        // verif jump : Manette
         if (Input.GetButtonDown("A") && groundCheck.isGrounded )
         {
-            Debug.Log("AAAAAAAAAAAAAAAh");
             velocity = jumpForce;
         }
         transform.Translate(new Vector3(0, velocity, 0) * Time.deltaTime);
