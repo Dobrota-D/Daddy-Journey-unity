@@ -32,34 +32,15 @@ public class PlayerMovement : MonoBehaviour {
         {
             print("wall");
             isGoingRight = !isGoingRight;
-            GetComponentInChildren<SpriteRenderer>().flipX = !GetComponentInChildren<SpriteRenderer>().flipX;
-            //if (GetComponentInChildren<SpriteRenderer>().flipX == true)
-            //{
-            //    GetComponentInChildren<SpriteRenderer>().flipX = false;
-            //}
-            //else
-            //{
-            //    GetComponentInChildren<SpriteRenderer>().flipX = true;
-            //}
-            // GetComponentInChildren<SpriteRenderer>().flipX = true;
+            FlipPlayer();
         }
 
-        // collision with a wall : go back and remove currentSpeed
         if (other.gameObject.CompareTag("obstacle"))
         {
             print("obstacle");
             isGoingRight = !isGoingRight;
             currentSpeed = minSpeed;
-
-            if (GetComponentInChildren<SpriteRenderer>().flipX == true)
-            {
-                GetComponentInChildren<SpriteRenderer>().flipX = false;
-            }
-            else
-            {
-                GetComponentInChildren<SpriteRenderer>().flipX = true;
-            }
-
+            FlipPlayer();
         }
     }
     void Update()
@@ -83,10 +64,25 @@ public class PlayerMovement : MonoBehaviour {
         transform.Translate(Vector3.right * currentSpeed * _direction * Time.smoothDeltaTime);
     }
 
+    void FlipPlayer()
+    {
+            GetComponentInChildren<SpriteRenderer>().flipX = !GetComponentInChildren<SpriteRenderer>().flipX;
+    }
+
     private IEnumerator AccelerationCoroutine()
     {
-        while(currentSpeed < maxMoveSpeed)
+        while (true)
         {
+            yield return new WaitForSeconds(1f);
+            if (currentSpeed < maxMoveSpeed)
+            {
+                currentSpeed += 1;
+            }
+
+        }
+        if (currentSpeed < maxMoveSpeed)
+        {
+            print("move speed acceleration");
             yield return new WaitForSeconds(1f);
             currentSpeed += 1;
         }
