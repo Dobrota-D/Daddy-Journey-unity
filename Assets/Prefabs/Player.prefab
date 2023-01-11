@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4325034183044396989}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.031646993, y: -0.061039288, z: 0.658}
-  m_LocalScale: {x: 0.72862005, y: 0.5148851, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4325034183449224066}
@@ -109,8 +109,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4325034183449224067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.232, y: -0.487, z: -0.658}
-  m_LocalScale: {x: 0.86580056, y: 0.9137565, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4325034183044396988}
@@ -254,7 +254,7 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 3.17
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4325034183517182731
@@ -288,6 +288,7 @@ MonoBehaviour:
   currentSpeed: 0
   minSpeed: 5
   maxMoveSpeed: 10
+  animator: {fileID: 0}
   isGoingRight: 1
 --- !u!1 &4325034183610142386
 GameObject:
@@ -333,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cded64df57d2146b5b09de935761b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToCheck: 2
+  distanceToCheck: 1
   isGrounded: 1
 --- !u!1 &5642650780912871664
 GameObject:
