@@ -222,6 +222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4325034183517182724, guid: f298030b302c31445a54c59388f7fe43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4325034183517182727, guid: f298030b302c31445a54c59388f7fe43, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -266,6 +270,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4325034183517182728, guid: f298030b302c31445a54c59388f7fe43, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4325034183517182730, guid: f298030b302c31445a54c59388f7fe43, type: 3}
       propertyPath: m_Height
       value: 0.91
@@ -273,6 +281,10 @@ PrefabInstance:
     - target: {fileID: 4325034183517182730, guid: f298030b302c31445a54c59388f7fe43, type: 3}
       propertyPath: m_Center.y
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325034183517182731, guid: f298030b302c31445a54c59388f7fe43, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4325034183517182731, guid: f298030b302c31445a54c59388f7fe43, type: 3}
       propertyPath: gravityScale
@@ -285,6 +297,10 @@ PrefabInstance:
     - target: {fileID: 4325034183610142389, guid: f298030b302c31445a54c59388f7fe43, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259329908711721875, guid: f298030b302c31445a54c59388f7fe43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6147680558447281544, guid: f298030b302c31445a54c59388f7fe43, type: 3}
       propertyPath: m_IsActive
@@ -5215,7 +5231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1187175818
 AudioListener:
   m_ObjectHideFlags: 0

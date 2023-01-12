@@ -20,11 +20,17 @@ public class PlayerMovement : MonoBehaviour {
         currentSpeed = minSpeed;
     }
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(AccelerationCoroutine());
+        gameObject.GetComponent<PlayerMovement>().enabled = true;
+        gameObject.GetComponent<PlayerJump>().enabled = true;
     }
-  
+    private void OnDisable()
+    {
+        StopCoroutine(AccelerationCoroutine());
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         // collision with a wall : just go back
@@ -78,13 +84,14 @@ public class PlayerMovement : MonoBehaviour {
             {
                 currentSpeed += 1;
             }
-
+            
+            if (currentSpeed < maxMoveSpeed)
+            {
+                print("move speed acceleration");
+                yield return new WaitForSeconds(1f);
+                currentSpeed += 1;
+            }
         }
-        if (currentSpeed < maxMoveSpeed)
-        {
-            print("move speed acceleration");
-            yield return new WaitForSeconds(1f);
-            currentSpeed += 1;
-        }
+       
     }
 }

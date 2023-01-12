@@ -8,6 +8,8 @@ public class PlayerJump : MonoBehaviour
     public float gravity = -9.81f;
     public float gravityScale = 5;
     float velocity;
+
+    private Vector3 _closestPoint;
     void Update()
     {
         velocity += gravity * gravityScale * Time.deltaTime;
@@ -15,8 +17,8 @@ public class PlayerJump : MonoBehaviour
         {
             float offset = 1;
             velocity = 0;
-            Vector3 closestPoint = groundCheck.hit.collider.ClosestPoint(transform.position);
-            Vector3 snappedPosition = new Vector3(transform.position.x, closestPoint.y + offset, transform.position.z);
+            _closestPoint = groundCheck.hit.collider.ClosestPoint(transform.position);
+            Vector3 snappedPosition = new Vector3(transform.position.x, _closestPoint.y + offset, transform.position.z);
 
             transform.position = snappedPosition;
         }
