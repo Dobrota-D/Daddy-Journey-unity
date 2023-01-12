@@ -8,6 +8,8 @@ public class PlayerJump : MonoBehaviour
     public float gravity = -9.81f;
     public float gravityScale = 5;
     float velocity;
+    public AudioSource audioSource;
+    public AudioClip jumpSound;
 
     private Vector3 _closestPoint;
     void Update()
@@ -25,6 +27,7 @@ public class PlayerJump : MonoBehaviour
         // verif jump : Keyboard
         if (Input.GetButtonDown("Jump") && groundCheck.isGrounded)
         {
+            AudioSource.PlayClipAtPoint(jumpSound, transform.position);
             velocity = jumpForce;
         }
 
