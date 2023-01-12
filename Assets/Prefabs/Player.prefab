@@ -520,8 +520,6 @@ MonoBehaviour:
   jumpForce: 15
   gravity: -9.81
   gravityScale: 5
-  audioSource: {fileID: 0}
-  sound: {fileID: 8300000, guid: cd865466c7ea7ac499a87e6b84a6b435, type: 3}
 --- !u!114 &4325034183517182728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,7 +550,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 75a45730c7cf53f42ad84409cebdefa7, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.068
   m_Pitch: 1
   Loop: 1

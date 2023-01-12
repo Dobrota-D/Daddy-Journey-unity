@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour {
         if (other.gameObject.CompareTag("wall"))
         {
             AudioSource.PlayClipAtPoint(wallSound, transform.position);
-            print("wall");
             isGoingRight = !isGoingRight;
             FlipPlayer();
         }
@@ -46,8 +45,6 @@ public class PlayerMovement : MonoBehaviour {
         if (other.gameObject.CompareTag("obstacle"))
         {
             AudioSource.PlayClipAtPoint(wallSound, transform.position);
-
-            print("obstacle");
             isGoingRight = !isGoingRight;
             currentSpeed = minSpeed;
             FlipPlayer();
@@ -91,11 +88,11 @@ public class PlayerMovement : MonoBehaviour {
             
             if (currentSpeed < maxMoveSpeed)
             {
-                print("move speed acceleration");
                 yield return new WaitForSeconds(1f);
                 currentSpeed += 1;
             }
         }
        
     }
+
 }

@@ -7,7 +7,6 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     [SerializeField] GameObject pauseMenuUI;
-    [SerializeField] GameObject settingsWindow;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -29,23 +28,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         gameIsPaused = true;
     }
-    public void OpenSettingsWindow()
-    {
-        Debug.Log("Settings actifs");
-        settingsWindow.SetActive(true);
-    }
-
-    public void CloseSettingsWindow()
-    {
-        settingsWindow.SetActive(false);
-    }
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
-        Debug.Log("Resume");
     }
 
     public void LoadMainMenu()
