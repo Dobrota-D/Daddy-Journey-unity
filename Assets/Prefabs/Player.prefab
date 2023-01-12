@@ -520,7 +520,7 @@ MonoBehaviour:
   jumpForce: 15
   gravity: -9.81
   gravityScale: 5
-  audiosource: {fileID: 7677580349103156757}
+  audioSource: {fileID: 0}
   sound: {fileID: 8300000, guid: cd865466c7ea7ac499a87e6b84a6b435, type: 3}
 --- !u!114 &4325034183517182728
 MonoBehaviour:
@@ -539,6 +539,8 @@ MonoBehaviour:
   maxMoveSpeed: 10
   animator: {fileID: 0}
   isGoingRight: 1
+  audioSource: {fileID: 0}
+  wallSound: {fileID: 8300000, guid: fa1c62ec795910d488a02bd47ce1e65a, type: 3}
 --- !u!82 &7677580349103156757
 AudioSource:
   m_ObjectHideFlags: 0
