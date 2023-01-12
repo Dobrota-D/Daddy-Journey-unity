@@ -40536,7 +40536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1738877848}
-  seconds: 67
+  seconds: 1
 --- !u!114 &1738877848
 MonoBehaviour:
   m_ObjectHideFlags: 0
