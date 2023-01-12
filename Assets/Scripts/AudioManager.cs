@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        audioSource.clip = playlist[0]; 
+         audioSource.clip = playlist[0]; 
         audioSource.Play();
         Debug.Log("Je suis la musique");
     }
