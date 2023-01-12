@@ -10,6 +10,7 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] AudioMixer audioMixer;
     Resolution[] resolutions;
     [SerializeField] Dropdown resolutionDropDown;
+    [SerializeField] GameObject closeButton;
 
     public void Start()
     {
@@ -37,7 +38,7 @@ public class SettingsMenu : MonoBehaviour
     {
         audioMixer.SetFloat("volume", volume);
     }
-
+   
     public void SetFullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;   
@@ -46,5 +47,9 @@ public class SettingsMenu : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+    public void CloseSettingsMenu()
+    {
+        closeButton.SetActive(false);
     }
 }
