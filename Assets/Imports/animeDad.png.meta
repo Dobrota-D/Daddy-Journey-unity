@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03641c26bf16d6b43a114fe9fa85fbdc
+guid: 99f8958d6ec9c12498bc67bcaceb20d9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Test-asset_0
+      name: animeDad_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,8 +119,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0a9013757578334698d38f20d643e8a
-      internalID: -586288275
+      spriteID: 13a1b9aeafb408e4c88bc85dce9da707
+      internalID: -1587261689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animeDad_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c5fdc280d0a87499787902930eb571
+      internalID: 1477727004
       vertices: []
       indices: 
       edges: []
@@ -128,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 45ada5affb9e3ac46980656b1e7f14ef
+    spriteID: 987b1dadaac17704a90c205595b81a50
     internalID: 0
     vertices: []
     indices: 
@@ -136,7 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Test-asset_0: -586288275
+      animeDad_1: 1477727004
+      animeDad_0: -1587261689
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

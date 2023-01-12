@@ -8,10 +8,12 @@ public class CountDownController : MonoBehaviour
     [SerializeField] Text countDownDisplay;
     [SerializeField] GameObject player;
     [SerializeField] GameObject message;
+    [SerializeField] GameObject dadPixel;
 
     private void Start()
     {
         player.SetActive(false);
+        dadPixel.SetActive(true);
         message.SetActive(true);
         StartCoroutine(CountDownToStart());
         
@@ -35,6 +37,7 @@ public class CountDownController : MonoBehaviour
         //on passe la variable isMoving à true pour pouvoir dans PlayerMouvement donner dees mouvements au Player
         player.SetActive(true);
         message.SetActive(false);
+        dadPixel.SetActive(false);
 
     }
 }
