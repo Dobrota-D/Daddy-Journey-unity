@@ -9,12 +9,19 @@ public class CountDownController : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject message;
     [SerializeField] GameObject dadPixel;
+    [SerializeField] GameObject audioManager;
+
+    private void Awake()
+    {
+        audioManager.SetActive(false); 
+    }
 
     private void Start()
     {
         player.SetActive(false);
         dadPixel.SetActive(true);
         message.SetActive(true);
+        audioManager.SetActive(true);
         StartCoroutine(CountDownToStart());
         
     }
@@ -38,6 +45,7 @@ public class CountDownController : MonoBehaviour
         player.SetActive(true);
         message.SetActive(false);
         dadPixel.SetActive(false);
+        
 
     }
 }
