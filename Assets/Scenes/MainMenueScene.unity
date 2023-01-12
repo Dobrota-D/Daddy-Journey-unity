@@ -988,7 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a2c8f133b1c10499653177d045ddc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: jajaScene
+  levelToLoad: mainScene
   SettingsWindow: {fileID: 1044606094}
 --- !u!1 &1740978962
 GameObject:
