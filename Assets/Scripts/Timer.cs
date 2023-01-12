@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-
+    [SerializeField] private Text timeText;
     public float seconds;
     private bool isRunning = false;
     // Start is called before the first frame update
@@ -34,7 +35,13 @@ public class Timer : MonoBehaviour
             isRunning = false;
             return;
         }
-        seconds -= Time.deltaTime;
+        seconds += Time.deltaTime;
+        //decompte
+        //seconds -= Time.deltaTime;
+
+        float minute = Mathf.FloorToInt(seconds / 60);
+        float sec = Mathf.FloorToInt(seconds % 60);
+        timeText.text = minute + " : "+sec.ToString();
     }
 
     public string DisplayTime()
