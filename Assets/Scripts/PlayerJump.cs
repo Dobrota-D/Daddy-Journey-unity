@@ -27,7 +27,7 @@ public class PlayerJump : MonoBehaviour
         // verif jump : Keyboard
         if (Input.GetButtonDown("Jump") && groundCheck.isGrounded)
         {
-            AudioSource.PlayClipAtPoint(jumpSound, transform.position);
+            AudioManager.instance.PlayClipAt(jumpSound, transform.position);
             velocity = jumpForce;
         }
 
