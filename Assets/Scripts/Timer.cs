@@ -41,7 +41,15 @@ public class Timer : MonoBehaviour
 
         float minute = Mathf.FloorToInt(seconds / 60);
         float sec = Mathf.FloorToInt(seconds % 60);
-        timeText.text = minute + " : "+sec.ToString();
+        if (sec < 10)
+        {
+            timeText.text = minute + " :0" + sec.ToString();
+        }
+        else
+        {
+            timeText.text = minute + " : " + sec.ToString();
+        }
+       
     }
 
     public string DisplayTime()
