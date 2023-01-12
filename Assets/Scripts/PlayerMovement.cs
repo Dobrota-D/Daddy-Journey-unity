@@ -36,14 +36,12 @@ public class PlayerMovement : MonoBehaviour {
         // collision with a wall : just go back
         if (other.gameObject.CompareTag("wall"))
         {
-            print("wall");
             isGoingRight = !isGoingRight;
             FlipPlayer();
         }
 
         if (other.gameObject.CompareTag("obstacle"))
         {
-            print("obstacle");
             isGoingRight = !isGoingRight;
             currentSpeed = minSpeed;
             FlipPlayer();
@@ -87,7 +85,6 @@ public class PlayerMovement : MonoBehaviour {
             
             if (currentSpeed < maxMoveSpeed)
             {
-                print("move speed acceleration");
                 yield return new WaitForSeconds(1f);
                 currentSpeed += 1;
             }
