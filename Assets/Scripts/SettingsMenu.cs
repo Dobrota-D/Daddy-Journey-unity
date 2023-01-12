@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 
 public class SettingsMenu : MonoBehaviour
 {
-    [SerializeField] AudioMixer audioMixer;
+    public AudioMixer audioMixer;
     Resolution[] resolutions;
     [SerializeField] Dropdown resolutionDropDown;
 
@@ -35,6 +35,7 @@ public class SettingsMenu : MonoBehaviour
     }
   public void SetVolume(float volume)
     {
+        Debug.Log(volume);  
         audioMixer.SetFloat("volume", volume);
     }
 
