@@ -10,6 +10,8 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] AudioMixer audioMixer;
     Resolution[] resolutions;
     [SerializeField] Dropdown resolutionDropDown;
+    [SerializeField] GameObject settingsWindow;
+
 
     public void Start()
     {
@@ -33,9 +35,20 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropDown.value = currentResolutionIndex;   
         resolutionDropDown.RefreshShownValue(); 
     }
-  public void SetVolume(float volume)
+  // public void SetVolume(float volume)
+   // {
+   //     Debug.Log(volume);  
+     //   audioMixer.SetFloat("music", volume);
+   // }
+    public void SetMusic(float volume)
     {
-        audioMixer.SetFloat("volume", volume);
+        Debug.Log(volume);
+        audioMixer.SetFloat("music", volume);
+    }
+    public void SetSound(float volume)
+    {
+        Debug.Log(volume);
+        audioMixer.SetFloat("sound", volume);
     }
 
     public void SetFullScreen(bool isFullScreen)
@@ -46,5 +59,9 @@ public class SettingsMenu : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+    public void CloseSettingsWindow(int resolutionIndex)
+    {
+       settingsWindow.SetActive(false);     
     }
 }

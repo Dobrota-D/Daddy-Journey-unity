@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] Animator animator;
     [Header ("Direction")]
     [SerializeField] bool isGoingRight;
-    
+    public AudioSource audioSource;
+    public AudioClip wallSound;
     private float _direction;
 
     private void Awake()
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour {
         // collision with a wall : just go back
         if (other.gameObject.CompareTag("wall"))
         {
+            AudioSource.PlayClipAtPoint(wallSound, transform.position);
             print("wall");
             isGoingRight = !isGoingRight;
             FlipPlayer();
@@ -43,6 +45,8 @@ public class PlayerMovement : MonoBehaviour {
 
         if (other.gameObject.CompareTag("obstacle"))
         {
+            AudioSource.PlayClipAtPoint(wallSound, transform.position);
+
             print("obstacle");
             isGoingRight = !isGoingRight;
             currentSpeed = minSpeed;
