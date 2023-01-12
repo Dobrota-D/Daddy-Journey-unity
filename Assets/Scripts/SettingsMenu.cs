@@ -34,11 +34,15 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropDown.value = currentResolutionIndex;   
         resolutionDropDown.RefreshShownValue(); 
     }
-  public void SetVolume(float volume)
+  public void SetMusic(float volume)
     {
-        audioMixer.SetFloat("volume", volume);
+        audioMixer.SetFloat("music", volume);
     }
-   
+    public void SetSound(float volume)
+    {
+        audioMixer.SetFloat("sound", volume);
+    }
+
     public void SetFullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;   

@@ -2606,7 +2606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752997ab20bce444390f110adff1be4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: ca2000bba79952d49b6a85cb843cbb92, type: 2}
+  audioMixer: {fileID: 24100000, guid: 75a45730c7cf53f42ad84409cebdefa7, type: 2}
   resolutionDropDown: {fileID: 1712976005791238084}
   closeButton: {fileID: 545477129253582718}
 --- !u!1 &7684906752455628048
