@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToCheck: 1
-  isGrounded: 1
+  isGrounded: 0
 --- !u!1 &5642650780912871664
 GameObject:
   m_ObjectHideFlags: 0
