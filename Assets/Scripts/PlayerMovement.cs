@@ -12,8 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] Animator animator;
     [Header ("Direction")]
     [SerializeField] bool isGoingRight;
-    public AudioSource audioSource;
-    public AudioClip wallSound;
+    
     private float _direction;
 
     private void Awake()
