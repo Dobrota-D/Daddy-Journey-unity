@@ -984,7 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: jajaScene
-  SettingsWindow: {fileID: 1691181230}
+  SettingsWindows: {fileID: 1691181230}
 --- !u!1 &1691181230 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7216078082001100318, guid: 14239e0c10f436f4b9cfbc88feb5c55e, type: 3}
