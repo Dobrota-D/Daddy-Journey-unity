@@ -8,15 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/BackgroundScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/jajaScene.unity
     guid: 73b9ccc4ecd0e864caa691f2ea5c7faf
   - enabled: 1
-    path: Assets/Scenes/scoreScene.unity
-    guid: 3c524985ad1f13d418e0cddd8b8005fd
-  - enabled: 1
     path: Assets/Scenes/MainMenueScene.unity
     guid: 692f925881e44a14d857044c69050e2b
+  - enabled: 1
+    path: Assets/Scenes/scoreScene.unity
+    guid: 3c524985ad1f13d418e0cddd8b8005fd
   - enabled: 1
     path: Assets/Scenes/mainScene.unity
     guid: 70908fd32839b32499c6fd1a8e7b4035
