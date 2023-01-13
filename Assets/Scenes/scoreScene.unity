@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -234,7 +234,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 507741293}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: mainScene
   SettingsWindow: {fileID: 0}
-  fadeSystem: {fileID: 0}
+  fadeSystem: {fileID: 1445400134}
   playButton: {fileID: 1890195417}
   settingsButton: {fileID: 320495280}
   quitButton: {fileID: 1531590848}
@@ -692,8 +692,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1445400133}
   - {fileID: 74043155}
+  - {fileID: 1445400133}
   - {fileID: 1744581602}
   - {fileID: 2107582569}
   - {fileID: 1890195418}
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507741288}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44ec33bd51212a34e8dfc8d6735f947a, type: 3}
   m_Name: 
@@ -741,7 +741,12 @@ MonoBehaviour:
   winText: {fileID: 16572079}
   loseText: {fileID: 1979359021}
   finalTime: {fileID: 1402039419}
+  clip: {fileID: 0}
   score: 0
+  timer: {fileID: 0}
+  winSound: {fileID: 8300000, guid: b2e854c28a1cdca4ba24308d33342b5b, type: 3}
+  loseSound: {fileID: 8300000, guid: 93f536d1d9d5dd44fbed6cfcd00f9026, type: 3}
+  volume: 0.5
 --- !u!1 &1402039419
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000014305, y: 375}
+  m_AnchoredPosition: {x: -0.000014305, y: 139}
   m_SizeDelta: {x: 446.02, y: 75.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1402039421
@@ -854,7 +859,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 507741293}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1181,9 +1186,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playlist:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 93f536d1d9d5dd44fbed6cfcd00f9026, type: 3}
+  - {fileID: 8300000, guid: b2e854c28a1cdca4ba24308d33342b5b, type: 3}
   audioSource: {fileID: 1612514412}
-  soundEffectMixer: {fileID: 0}
+  soundEffectMixer: {fileID: -7495772675388082296, guid: 75a45730c7cf53f42ad84409cebdefa7, type: 2}
 --- !u!82 &1612514412
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1194,11 +1200,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -427190091722198333, guid: 75a45730c7cf53f42ad84409cebdefa7, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2bb17eb7a2139b84bb4c00e78201adf1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.062
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

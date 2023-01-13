@@ -34,4 +34,17 @@ public class AudioManager : MonoBehaviour
         Destroy(tempGO, clip.length);
         return audioSource; 
     }
+    public AudioSource PlayGingle(AudioClip clip, Vector3 pos, float volume)
+    {
+        GameObject tempGO = new GameObject("TempAudio");
+        tempGO.transform.position = pos;
+        AudioSource audioSource = tempGO.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        audioSource.volume = volume;
+        audioSource.outputAudioMixerGroup = soundEffectMixer;
+        audioSource.loop = false;   
+        audioSource.Play();
+        Destroy(tempGO, clip.length);
+        return audioSource;
+    }
 }
