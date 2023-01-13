@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -39285,7 +39285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -21}
+  m_AnchoredPosition: {x: 0, y: -60}
   m_SizeDelta: {x: 96.568, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071434428
@@ -40010,7 +40010,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1217818634
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42650,6 +42650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4325034183517182727, guid: f298030b302c31445a54c59388f7fe43, type: 3}
       propertyPath: m_LocalPosition.x
+      value: 143.3
       value: 143.1
       objectReference: {fileID: 0}
     - target: {fileID: 4325034183517182727, guid: f298030b302c31445a54c59388f7fe43, type: 3}
@@ -44244,7 +44245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -61}
+  m_AnchoredPosition: {x: 0, y: -22}
   m_SizeDelta: {x: 96.568, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1757314949
@@ -44363,7 +44364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1777976588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44711,6 +44712,7 @@ MonoBehaviour:
   audioManager: {fileID: 1070003937}
   scoreText: {fileID: 1738877845}
   timer: {fileID: 756359245}
+  decompt: {fileID: 1217818633}
 --- !u!114 &1845804379
 MonoBehaviour:
   m_ObjectHideFlags: 0
