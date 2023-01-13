@@ -19,13 +19,13 @@ public class Timer : MonoBehaviour
 void Start()
     {
         StartTimer();
-        //if(!isGameFinished) scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        if(!isGameFinished) scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
 
     }
     // Update is called once per frame
     void Update()
     {
-        //if (isGameFinished) scoreText = GameObject.Find("FinalScore").GetComponent<Text>();
+        if (isGameFinished) scoreText = GameObject.Find("FinalScore").GetComponent<Text>();
         if (isRunning && isGameFinished == false)
         {
             print("is game finished "  +  isGameFinished);

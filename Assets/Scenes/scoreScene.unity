@@ -594,7 +594,6 @@ GameObject:
   - component: {fileID: 507741289}
   - component: {fileID: 507741294}
   - component: {fileID: 507741295}
-  - component: {fileID: 507741296}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -741,21 +740,6 @@ MonoBehaviour:
   winText: {fileID: 16572079}
   loseText: {fileID: 1979359021}
   score: 50
---- !u!114 &507741296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507741288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3762fc0b3f418bf42b723ffb15f1e12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGameFinished: 0
-  scoreText: {fileID: 1402039421}
-  seconds: 0
 --- !u!1 &1402039419
 GameObject:
   m_ObjectHideFlags: 0
