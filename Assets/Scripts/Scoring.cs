@@ -16,11 +16,12 @@ public class Scoring : MonoBehaviour
     public AudioClip winSound;
     public AudioClip loseSound;
     public float volume = 0.3f;
+
     private void Start()
     {
         timer = GameObject.Find("Timer");
         score = timer.GetComponent<Timer>().seconds;
-        if (score < 3)
+        if (score < 120)
         {
             ToWin();
             AudioManager.instance.PlayGingle(winSound, transform.position, volume);
@@ -33,13 +34,6 @@ public class Scoring : MonoBehaviour
             // loseSound.PlayOneShot(clip, volume);
         }
     }
-    private void Update()
-    {
-       
-
-        
-    }
-
 
     void ToWin()
     {

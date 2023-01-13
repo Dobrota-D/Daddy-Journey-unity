@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7044,8 +7044,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6146852915331549297, guid: 69ddeac4d78c9aa4191407b22cbbf823, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6146852915331549299, guid: 69ddeac4d78c9aa4191407b22cbbf823, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47d0b796c55b814459151abe8b7c827f, type: 2}
     - target: {fileID: 6146852915331549309, guid: 69ddeac4d78c9aa4191407b22cbbf823, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -47966,7 +47970,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1124760057
 PrefabInstance:
@@ -51104,7 +51108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4325034183517182727, guid: f298030b302c31445a54c59388f7fe43, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4325034183517182727, guid: f298030b302c31445a54c59388f7fe43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52213,7 +52217,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1678183327
 GameObject:
@@ -54656,7 +54660,7 @@ RectTransform:
   - {fileID: 1794525896}
   - {fileID: 1777976588}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
