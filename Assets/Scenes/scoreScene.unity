@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -741,7 +741,12 @@ MonoBehaviour:
   winText: {fileID: 16572079}
   loseText: {fileID: 1979359021}
   finalTime: {fileID: 1402039419}
+  clip: {fileID: 0}
   score: 0
+  timer: {fileID: 0}
+  winSound: {fileID: 8300000, guid: b2e854c28a1cdca4ba24308d33342b5b, type: 3}
+  loseSound: {fileID: 8300000, guid: 93f536d1d9d5dd44fbed6cfcd00f9026, type: 3}
+  volume: 0.5
 --- !u!1 &1402039419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,9 +1186,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playlist:
+  - {fileID: 8300000, guid: 93f536d1d9d5dd44fbed6cfcd00f9026, type: 3}
   - {fileID: 8300000, guid: b2e854c28a1cdca4ba24308d33342b5b, type: 3}
   audioSource: {fileID: 1612514412}
-  soundEffectMixer: {fileID: 0}
+  soundEffectMixer: {fileID: -7495772675388082296, guid: 75a45730c7cf53f42ad84409cebdefa7, type: 2}
 --- !u!82 &1612514412
 AudioSource:
   m_ObjectHideFlags: 0
