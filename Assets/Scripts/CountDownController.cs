@@ -12,6 +12,7 @@ public class CountDownController : MonoBehaviour
     [SerializeField] GameObject audioManager;
     [SerializeField] GameObject scoreText;
     [SerializeField] GameObject timer;
+    [SerializeField] GameObject decompt;
     private void Awake()
     {
         timer.SetActive(false);
@@ -23,6 +24,7 @@ public class CountDownController : MonoBehaviour
         dadPixel.SetActive(true);
         message.SetActive(true);
         audioManager.SetActive(false);
+        decompt.SetActive(true);
 
         StartCoroutine(CountDownToStart());
 
@@ -50,6 +52,7 @@ public class CountDownController : MonoBehaviour
         scoreText.SetActive(true);
         timer.SetActive(true);
         audioManager.SetActive(true);
+        decompt.SetActive(false);
 
 
     }

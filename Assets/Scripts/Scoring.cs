@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class Scoring : MonoBehaviour
 {
@@ -8,23 +10,33 @@ public class Scoring : MonoBehaviour
     [SerializeField] GameObject winText;
     [SerializeField] GameObject loseText;
     [SerializeField] GameObject finalTime;
+    public AudioClip clip;
     [SerializeField] float score;
+    public GameObject timer;
+    public AudioClip winSound;
+    public AudioClip loseSound;
+    public float volume = 0.3f;
     private void Start()
     {
-        score = finalTime.GetComponent<float>();
-    }
-    private void Update()
-    {
-
-
-        if (score < 45)
+        timer = GameObject.Find("Timer");
+        score = timer.GetComponent<Timer>().seconds;
+        if (score < 3)
         {
             ToWin();
+            AudioManager.instance.PlayGingle(winSound, transform.position, volume);
+            // winSound.PlayOneShot(clip, volume);
         }
         else
         {
             ToLose();
+            AudioManager.instance.PlayGingle(loseSound, transform.position, volume);
+            // loseSound.PlayOneShot(clip, volume);
         }
+    }
+    private void Update()
+    {
+       
+
         
     }
 
@@ -39,6 +51,7 @@ public class Scoring : MonoBehaviour
     {
         winText.SetActive(false);
         loseText.SetActive(true);
+        
     }
 
 }
