@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     [SerializeField] GameObject pauseMenuUI;
+    [SerializeField] GameObject settingsMenu;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -36,6 +37,14 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = false;
     }
 
+    public void OpenSettingsMenu()
+    {
+        settingsMenu.SetActive(true);
+    }
+    public void CloseSettingsMenu()
+    {
+        settingsMenu.SetActive(false);
+    }
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenueScene");

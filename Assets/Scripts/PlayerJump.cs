@@ -12,6 +12,10 @@ public class PlayerJump : MonoBehaviour
     public AudioClip jumpSound;
 
     private Vector3 _closestPoint;
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("base")) velocity = 0;
+    }
     void Update()
     {
         velocity += gravity * gravityScale * Time.deltaTime;
@@ -24,10 +28,11 @@ public class PlayerJump : MonoBehaviour
 
             transform.position = snappedPosition;
         }
+
         // verif jump : Keyboard
         if (Input.GetButtonDown("Jump") && groundCheck.isGrounded)
         {
-            AudioSource.PlayClipAtPoint(jumpSound, transform.position);
+            AudioManager.instance.PlayClipAt(jumpSound, transform.position);
             velocity = jumpForce;
         }
 

@@ -10,10 +10,11 @@ public class CountDownController : MonoBehaviour
     [SerializeField] GameObject message;
     [SerializeField] GameObject dadPixel;
     [SerializeField] GameObject audioManager;
-
+    [SerializeField] GameObject scoreText;
+    [SerializeField] GameObject timer;
     private void Awake()
     {
-        audioManager.SetActive(false); 
+        timer.SetActive(false);
     }
 
     private void Start()
@@ -21,9 +22,10 @@ public class CountDownController : MonoBehaviour
         player.SetActive(false);
         dadPixel.SetActive(true);
         message.SetActive(true);
-        audioManager.SetActive(true);
+        audioManager.SetActive(false);
+
         StartCoroutine(CountDownToStart());
-        
+
     }
 
     IEnumerator CountDownToStart()
@@ -45,7 +47,10 @@ public class CountDownController : MonoBehaviour
         player.SetActive(true);
         message.SetActive(false);
         dadPixel.SetActive(false);
-        
+        scoreText.SetActive(true);
+        timer.SetActive(true);
+        audioManager.SetActive(true);
+
 
     }
 }
