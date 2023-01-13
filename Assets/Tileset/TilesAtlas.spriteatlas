@@ -640,18 +640,14 @@ SpriteAtlas:
   - {fileID: -225677979, guid: 987929d4ccaa1a745a8cc43de604f640, type: 3}
   - {fileID: 1060346728, guid: 987929d4ccaa1a745a8cc43de604f640, type: 3}
   - {fileID: -1382250527, guid: 987929d4ccaa1a745a8cc43de604f640, type: 3}
-  - {fileID: 9505604, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
-  - {fileID: -632578486, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
-  - {fileID: 1363176177, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
-  - {fileID: -435609201, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
   - {fileID: 24321246, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
   - {fileID: -720537763, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
   - {fileID: 85488283, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
   - {fileID: -1296447642, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
-  - {fileID: -942506573, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
-  - {fileID: -35885248, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
-  - {fileID: 1723993506, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
-  - {fileID: 1147721003, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
+  - {fileID: -89218419, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
+  - {fileID: -610216289, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
+  - {fileID: -648065208, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
+  - {fileID: -585368777, guid: 7b5ded3de24df324c8096e94bf2cae98, type: 3}
   m_PackedSpriteNamesToIndex:
   - tileset4_81
   - tileset4_39
@@ -1242,10 +1238,6 @@ SpriteAtlas:
   - tileset4_104
   - tileset4_132
   - tileset4_160
-  - tilesetDoor_11
-  - tilesetDoor_10
-  - tilesetDoor_8
-  - tilesetDoor_9
   - tilesetDoor_0
   - tilesetDoor_1
   - tilesetDoor_2
