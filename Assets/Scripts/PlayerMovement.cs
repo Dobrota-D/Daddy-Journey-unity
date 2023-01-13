@@ -37,14 +37,14 @@ public class PlayerMovement : MonoBehaviour {
         // collision with a wall : just go back
         if (other.gameObject.CompareTag("wall"))
         {
-            AudioSource.PlayClipAtPoint(wallSound, transform.position);
+            AudioManager.instance.PlayClipAt(wallSound, transform.position);
             isGoingRight = !isGoingRight;
             FlipPlayer();
         }
 
         if (other.gameObject.CompareTag("obstacle"))
         {
-            AudioSource.PlayClipAtPoint(wallSound, transform.position);
+            AudioManager.instance.PlayClipAt(wallSound, transform.position);
             isGoingRight = !isGoingRight;
             currentSpeed = minSpeed;
             FlipPlayer();

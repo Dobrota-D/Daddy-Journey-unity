@@ -7,10 +7,17 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] string levelToLoad;
     public GameObject SettingsWindow;
-   
-   public void StartGame()
+    [SerializeField] Animator fadeSystem;
+    [SerializeField] GameObject playButton;
+    [SerializeField] GameObject settingsButton;
+    [SerializeField] GameObject quitButton;
+
+    public void StartGame()
     {
-        SceneManager.LoadScene(levelToLoad);
+        playButton.SetActive(false);
+        settingsButton.SetActive(false);    
+        quitButton.SetActive(false);    
+        StartCoroutine(loadNextScene());
         Debug.Log(levelToLoad); 
     }
     public void SettingsButton()
@@ -24,5 +31,13 @@ public class MainMenu : MonoBehaviour
     public void CloseSettingsWindow()
     {
         SettingsWindow.SetActive(false);
+    }
+
+    public IEnumerator loadNextScene()
+    {
+        fadeSystem.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(levelToLoad);
     }
 }
