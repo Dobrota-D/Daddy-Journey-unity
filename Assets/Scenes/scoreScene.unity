@@ -234,7 +234,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 507741293}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: mainScene
   SettingsWindow: {fileID: 0}
-  fadeSystem: {fileID: 0}
+  fadeSystem: {fileID: 1445400134}
   playButton: {fileID: 1890195417}
   settingsButton: {fileID: 320495280}
   quitButton: {fileID: 1531590848}
@@ -692,8 +692,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1445400133}
   - {fileID: 74043155}
+  - {fileID: 1445400133}
   - {fileID: 1744581602}
   - {fileID: 2107582569}
   - {fileID: 1890195418}
@@ -859,7 +859,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 507741293}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
