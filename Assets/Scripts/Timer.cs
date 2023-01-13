@@ -5,36 +5,42 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private Text timeText;
+    [SerializeField] bool isGameFinished;
+    public Text scoreText;
     public float seconds;
     private bool isRunning = false;
-    // Start is called before the first frame update
-    void Start()
+
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+// Start is called before the first frame update
+void Start()
     {
         StartTimer();
-    }
+        if(!isGameFinished) scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
 
+    }
     // Update is called once per frame
     void Update()
     {
-        if (isRunning)
+        if (isGameFinished) scoreText = GameObject.Find("FinalScore").GetComponent<Text>();
+        if (isRunning && isGameFinished == false)
         {
-            DecreasedTimer();
+            print("is game finished "  +  isGameFinished);
+            IncreaseTimer();
         }
+        scoreText.text = DisplayTime();
     }
+
     void StartTimer()
     {
         isRunning = true;
     }
 
-    void DecreasedTimer()
+    void IncreaseTimer()
     {
-        if (seconds < 1)
-        {
-            seconds = 0; //Make sure the seconds won't be negative
-            isRunning = false;
-            return;
-        }
         seconds += Time.deltaTime;
         //decompte
         //seconds -= Time.deltaTime;
@@ -43,13 +49,12 @@ public class Timer : MonoBehaviour
         float sec = Mathf.FloorToInt(seconds % 60);
         if (sec < 10)
         {
-            timeText.text = minute + " :0" + sec.ToString();
+            scoreText.text = minute + " :0" + sec.ToString();
         }
         else
         {
-            timeText.text = minute + " : " + sec.ToString();
+            scoreText.text = minute + " : " + sec.ToString();
         }
-       
     }
 
     public string DisplayTime()
@@ -58,4 +63,18 @@ public class Timer : MonoBehaviour
         float sec = Mathf.FloorToInt(seconds % 60);
         return string.Format("{0:00}:{1:00}", minute, sec);
     }
+
+    public void SetGameFinished(bool b)
+    {
+
+        isGameFinished = b;
+        print("is game finished " + isGameFinished);
+
+    }
+    public bool GetIsGameFinished()
+    {
+        return isGameFinished;
+    }
+
+
 }
