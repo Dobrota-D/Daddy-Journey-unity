@@ -15,8 +15,8 @@ public class Timer : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
-// Start is called before the first frame update
-void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         StartTimer();
         if(!isGameFinished) scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
