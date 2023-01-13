@@ -753,7 +753,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3762fc0b3f418bf42b723ffb15f1e12c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  isGameFinished: 0
+  scoreText: {fileID: 1402039421}
   seconds: 0
 --- !u!1 &1402039419
 GameObject:
