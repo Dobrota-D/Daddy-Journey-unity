@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Scoring : MonoBehaviour
 {
@@ -9,15 +10,15 @@ public class Scoring : MonoBehaviour
     [SerializeField] GameObject loseText;
     [SerializeField] GameObject finalTime;
     [SerializeField] float score;
+    public GameObject timer;
     private void Start()
     {
-        score = finalTime.GetComponent<float>();
+        timer = GameObject.Find("Timer");
+        score = timer.GetComponent<Timer>().seconds;
     }
     private void Update()
     {
-
-
-        if (score < 45)
+        if (score < 3)
         {
             ToWin();
         }
