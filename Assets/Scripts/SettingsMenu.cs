@@ -45,7 +45,9 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetFullScreen(bool isFullScreen)
     {
-        Screen.fullScreen = isFullScreen;   
+        
+            Screen.fullScreen = isFullScreen;
+          
     }
     public void SetResolution(int resolutionIndex)
     {

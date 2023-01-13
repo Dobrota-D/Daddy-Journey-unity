@@ -5,13 +5,13 @@ using System.Collections;
 public class LoadScoreScene : MonoBehaviour
 {
     [SerializeField] Animator fadeSystem;
-    [SerializeField] GameObject timeOut;
+    // [SerializeField] GameObject timeOut;
     [SerializeField] Timer timer;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            timeOut.SetActive(false);   
+           //  timeOut.SetActive(false);   
             StartCoroutine(loadNextScene());
         }
     }
