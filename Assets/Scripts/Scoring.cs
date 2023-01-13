@@ -7,9 +7,12 @@ public class Scoring : MonoBehaviour
     [SerializeField] bool win;
     [SerializeField] GameObject winText;
     [SerializeField] GameObject loseText;
-
+    [SerializeField] GameObject finalTime;
     [SerializeField] float score;
-
+    private void Start()
+    {
+        score = finalTime.GetComponent<float>();
+    }
     private void Update()
     {
 
